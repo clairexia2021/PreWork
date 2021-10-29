@@ -21,21 +21,24 @@ class SettingsViewController: UIViewController {
     // customized segement fields
     @IBAction func tipAdjustFunc1(_ sender: Any) {
         let defaults = UserDefaults.standard
-        let rate1Text:String = rateAdjust1.text!
+        var rate1Text:String = rateAdjust1.text!
+        rate1Text = rate1Text.replacingOccurrences(of:"%", with: "")
         defaults.set(rate1Text + "%", forKey: "newRate1")
         defaults.synchronize()
     }
     
     @IBAction func tipAdjustFunc2(_ sender: Any) {
         let defaults = UserDefaults.standard
-        let rate2Text:String = rateAdjust2.text!
+        var rate2Text:String = rateAdjust2.text!
+        rate2Text=rate2Text.replacingOccurrences(of:"%", with: "")
         defaults.set(rate2Text + "%", forKey: "newRate2")
         defaults.synchronize()
     }
     
     @IBAction func tipAdjustFunc3(_ sender: Any) {
         let defaults = UserDefaults.standard
-        let rate3Text:String = rateAdjust3.text!
+        var rate3Text:String = rateAdjust3.text!
+        rate3Text=rate3Text.replacingOccurrences(of:"%", with: "")
         defaults.set(rate3Text + "%", forKey: "newRate3")
         defaults.synchronize()
     }
