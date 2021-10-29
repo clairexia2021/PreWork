@@ -18,6 +18,7 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // customized segement fields
     @IBAction func tipAdjustFunc1(_ sender: Any) {
         let defaults = UserDefaults.standard
         let rate1Text:String = rateAdjust1.text!
@@ -34,7 +35,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func tipAdjustFunc3(_ sender: Any) {
         let defaults = UserDefaults.standard
-        let rate3Text:String = rateAdjust1.text!
+        let rate3Text:String = rateAdjust3.text!
         defaults.set(rate3Text + "%", forKey: "newRate3")
         defaults.synchronize()
     }
